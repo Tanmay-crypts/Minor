@@ -97,11 +97,11 @@ const Register = () => {
                         onChange={handleChange}
                         className="border-none border-b-2 border-blue-100 p-2 rounded-md"
                       >
-                        <option value="user">User</option>
-                        <option value="doctor">Doctor</option>
+                        <option value="user">Student</option>
+                        <option value="doctor">Parent</option>
                       </select>
                     </div>
-                    {inputs.usertype === 'doctor' && (
+                    {inputs.usertype === '' && (
                       <div>
                         <input
                           type="text"

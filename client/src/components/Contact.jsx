@@ -108,7 +108,7 @@ const Contact = () => {
 
   return (
     <div id='contact' className='max-w-[1040px] m-auto md:pl-20 p-4 py-16'>
-      <h1 className='py-4 text-4xl font-bold text-center text-{#001b5e}'>BOOK APPOINTMENT</h1>
+      <h1 className='py-4 text-4xl font-bold text-center text-{#001b5e}'>Find your college</h1>
       <form onSubmit={handleSubmit} encType='multipart/form-data'>
         <div className='grid md:grid-cols-2 gap-4 py-2'>
           <div className='flex flex-col'>
@@ -120,34 +120,24 @@ const Contact = () => {
             <input className={`border-2 rounded-lg p-3 flex border-gray-300 ${formErrors.phone ? 'border-red-500' : ''}`} type="text" name='phone' value={formData.phone} onChange={handleChange} required />
           </div>
           <div className='flex flex-col py-2'>
-            <label className={`uppercase text-sm py-2 ${formErrors.email ? 'text-red-500' : ''}`}>Email:</label>
-            <input className={`border-2 rounded-lg p-3 flex border-gray-300 ${formErrors.email ? 'border-red-500' : ''}`} type="email" name='email' value={formData.email} onChange={handleChange} required />
+            <label className={`uppercase text-sm py-2 ${formErrors.email ? 'text-red-500' : ''}`}>Rank:</label>
+            <input className={`border-2 rounded-lg p-3 flex border-gray-300 ${formErrors.email ? 'border-red-500' : ''}`} type="number" name='email' value={formData.email} onChange={handleChange} required />
           </div>
          
           <div className='flex flex-col'>
-            <label className={`uppercase text-sm py-2 ${formErrors.appointmentDate ? 'text-red-500' : ''}`}>Select Date of Appointment:</label>
-            <input className={`border-2 rounded-lg p-3 flex border-gray-300 ${formErrors.appointmentDate ? 'border-red-500' : ''}`} type="date" name='appointmentDate' value={formData.appointmentDate} onChange={handleChange} required />
+            <label className={`uppercase text-sm py-2 ${formErrors.appointmentDate ? 'text-red-500' : ''}`}>City:</label>
+            <input className={`border-2 rounded-lg p-3 flex border-gray-300 ${formErrors.appointmentDate ? 'border-red-500' : ''}`} type="text" name='appointmentDate' value={formData.appointmentDate} onChange={handleChange} required />
           </div>
           <div className='flex flex-col'>
-            <label className={`uppercase text-sm py-2 ${formErrors.appointmentTime ? 'text-red-500' : ''}`}>Select Time of Appointment:</label>
-            <select className={`border-2 rounded-lg p-3 flex border-gray-300 ${formErrors.appointmentTime ? 'border-red-500' : ''}`} name='appointmentTime' value={formData.appointmentTime} onChange={handleChange} required>
-              <option>--select time--</option>
-              <option value="9:00 AM">9:00 AM</option>
-              <option value="10:00 AM">10:00 AM</option>
-              <option value="11:00 AM">11:00 AM</option>
-              <option value="12:00 PM">12:00 PM</option>
-              <option value="1:00 PM">1:00 PM</option>
-              <option value="2:00 PM">2:00 PM</option>
-              <option value="3:00 PM">3:00 PM</option>
-              <option value="4:00 PM">4:00 PM</option>
-              <option value="5:00 PM">5:00 PM</option>
-            </select>
+            <label className={`uppercase text-sm py-2 ${formErrors.appointmentTime ? 'text-red-500' : ''}`}>Pincode:</label>
+            <input className={`border-2 rounded-lg p-3 flex border-gray-300 ${formErrors.appointmentTime ? 'border-red-500' : ''}`} type='number' name='appointmentTime' value={formData.appointmentTime} onChange={handleChange} required/>
+            
           </div>
         </div>
-        <div className='flex flex-col'>
+        {/* <div className='flex flex-col'>
           <label className={`uppercase text-sm py-2 ${formErrors.message ? 'text-red-500' : ''}`}>Message:</label>
           <textarea className={`border-2 rounded-lg p-3 flex border-gray-300 ${formErrors.message ? 'border-red-500' : ''}`} rows='5' name='message' value={formData.message} onChange={handleChange} required />
-        </div>
+        </div> */}
         <button className='bg-green-500 text-black-100 mt-4 w-fill p-4 rounded-lg'>Submit Form</button>
       </form>
     </div>

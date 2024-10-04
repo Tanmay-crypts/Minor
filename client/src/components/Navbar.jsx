@@ -29,7 +29,7 @@ const Navbar = () => {
       </div>
       <div className="flex items-center justify-center flex-1">
         {/* Centered Heading */}
-        <h1 className="text-white font-bold text-xl">Blood Donation</h1>
+        <h1 className="text-white font-bold text-xl">College Compass</h1>
       </div>
       <div className="flex items-center space-x-4 mr-4">
         {searchVisible && (
@@ -40,7 +40,7 @@ const Navbar = () => {
           />
         )}
         <Link to="/blood"><button className="text-white border-b-2 border-transparent hover:border-black  hover:text-black">
-          Donate
+          
         </button></Link>
        <Link to="/register"><button className="text-white border-b-2 border-transparent hover:border-black  hover:text-black">
           Sign In / Sign Up
